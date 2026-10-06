@@ -13,7 +13,7 @@ app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));
 
 app.use((req, res) => {
-  res.status(404).sendFile(process.cwd() + "/public/index.html");
+  res.sendFile(process.cwd() + "/public/index.html");
 });
 
 const server = createServer((req, res) => {
